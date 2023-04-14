@@ -1,41 +1,33 @@
-
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+   <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
+	
 	<!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <title>WelCome to spring</title>
 <style>
-#employees {
+#students {
 	font-family: Arial, Helvetica, sans-serif;
 	border-collapse: collapse;
 	width: 100%;
 }
 
-#employees td, #customers th {
+#students td, #customers th {
 	border: 1px solid #ddd;
 	padding: 8px;
 }
 
-#employees tr:nth-child(even) {
+#students tr:nth-child(even) {
 	background-color: #f2f2f2;
 }
 
-#employees tr:hover {
+#students tr:hover {
 	background-color: #ddd;
 }
 
-#employees th {
+#students th {
 	padding-top: 12px;
 	padding-bottom: 12px;
 	text-align: left;
@@ -45,28 +37,25 @@
 </style>
 </head>
 <body>
-	<a href="./save">Employee student </a>
-	<table id="employees">
+<a href="./sa">Employee student </a>
+	<table id="students">
 		<tr>
 			<th>emp ID</th>
 			<th>emp NAME</th>
-			<th>emp sal</th>
-			<th>emp email</th>
+			<th>emp scl</th>
 
 			<th>Actions</th>
 		</tr>
-		<c:forEach items="${map}" var="emp">
+		<c:forEach items="${ms}" var="stu">
 			<tr>
-				<td>${emp.id}</td>
-				<td>${emp.name}</td>
-				<td>${emp.sal}</td>
-				<td>${emp.email}</td>
+				<td>${stu.id}</td>
+				<td>${stu.name}</td>
+				<td>${stu.scl}</td>
 
 
 
-
-				<td><a href="./delete?id=${emp.id}">delete</a> <a
-					href="./up?id=${emp.id}">update</a></td>
+				<td><a href="./delete?id=${stu.id}">delete</a> 
+				<a href="./up?id=${stu.id}">update</a></td>
 			</tr>
 		</c:forEach>
 	</table>

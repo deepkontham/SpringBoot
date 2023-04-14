@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="./jk" method="post">
+	<form action="./insert" method="post">
 		<table>
 			<tr>
 				<td>id</td>
@@ -19,14 +19,8 @@
 			</tr>
 			<tr>
 				<td>sal</td>
-				<td><input type="text" name="sal"></td>
+				<td><input type="text" name="scl"></td>
 			</tr>
-			<tr>
-
-
-				<td>email</td>
-				<td><input type="text" name="email"></td>
-				</tr>
 			
 				<tr>
 				<td><input type="submit" value="save"></td>

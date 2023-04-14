@@ -2,16 +2,13 @@ package com.ciq.controller;
 
 import java.util.List;
 
-import javax.websocket.server.PathParam;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ciq.model.Employee;
@@ -28,8 +25,7 @@ public class EmployController {
 	
 	
 	@GetMapping("/save")
-	public ModelAndView save(Employee employee) {
-//		employServiceimpl.save(employee);
+	public ModelAndView save() {
 		return new ModelAndView("insert");
 	}
 	@PostMapping("/jk")

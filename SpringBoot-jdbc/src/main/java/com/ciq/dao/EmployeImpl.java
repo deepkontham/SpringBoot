@@ -1,11 +1,11 @@
 package com.ciq.dao;
 
 import java.sql.ResultSet;
+
 import java.sql.SQLException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
@@ -58,8 +58,6 @@ return delete;
 		Object[]u= {employee.getName(),employee.getSal(),employee.getEmail(),employee.getId()};
 		return jdbcTemplate.update(s1, u);
 		}
-	
- 
 	@Override 
 	public Employee getbyid(int id) {
 		String s="select * from employees where Eid=?";

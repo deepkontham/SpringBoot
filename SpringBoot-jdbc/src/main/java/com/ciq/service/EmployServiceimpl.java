@@ -7,12 +7,12 @@ import org.springframework.stereotype.Service;
 
 import com.ciq.dao.EmployeImpl;
 import com.ciq.model.Employee;
-
 @Service
-public class EmployServiceimpl implements EmployeeService {
+public class EmployServiceimpl implements EmployServicedao{
 	
 	@Autowired
 	private EmployeImpl employeImpl;
+	
 
 	@Override
 	public void save(Employee employee) {
@@ -27,7 +27,6 @@ public class EmployServiceimpl implements EmployeeService {
 
 	@Override
 	public int delete(int id) {
-		
 		return employeImpl.delete(id);
 	}
 
